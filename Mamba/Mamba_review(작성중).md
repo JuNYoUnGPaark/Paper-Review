@@ -11,7 +11,7 @@
 
 *Q1. SSM이란?*
 
-- *시퀀스 데이터를 hidden state로 요약해 나가는 점에서 RNN/LSTM과 같은 계열이지만, 핵심은 $h_t = Ah_{t-1}+Bx_t, \ y_t = Ch_t + Dx_t$같은 ‘선형 동역학’(state-space) 구조를 사용하는 모델을 말한다.*
+- *시퀀스 데이터를 hidden state로 요약해 나가는 점에서 RNN/LSTM과 같은 계열이지만, 핵심은 $h_t = Ah_{t-1}+Bx_t, \ y_t = Ch_t + Dx_t$ 같은 ‘선형 동역학’(state-space) 구조를 사용하는 모델을 말한다.*
 
 *Q2. 동역학이란?*
 
@@ -27,7 +27,7 @@
 *Q4. Mamba는?*
 
 - *기존의 SSM은 시간에 따라 A, B가 고정(Linear Time Invarient: LTI)여서 표현력이 떨어짐*
-- *Mamba는 $h_t = A_th_{t-1}+B_tx_t$로 업그레이드 함. A, B를 입력에 따라 변화시키는(selective)구조로 만들어서 transformer와 같이 내용-기반 추론이 가능해짐.*
+- *Mamba는 $h_t = A_th_{t-1}+B_tx_t$ 로 업그레이드 함. A, B를 입력에 따라 변화시키는(selective)구조로 만들어서 transformer와 같이 내용-기반 추론이 가능해짐.*
 
 ---
 
