@@ -52,9 +52,7 @@ $h_t = ah_{t-1}+bx, \ y_t = ch_t$ 일 떄,
 - $t=3$: $y_3=ch_3=ca^3h_0+ca^2bx_1+cabx_2+cbx_3$
 - 일반화하면, $y_t=\sum\limits_{l=0}^{t-1} k_lx_{t-l}$
     
-    $$
-    k_0=cb, \ k_1 = cab, \ k_2=ca^2b, \ ..., k_l=ca^lb
-    $$
+    $k_0=cb, \ k_1 = cab, \ k_2=ca^2b, \ ..., k_l=ca^lb$
     
     이 $k_l$들이 바로 “Kernel”이라고 볼 수 있음. 
     
