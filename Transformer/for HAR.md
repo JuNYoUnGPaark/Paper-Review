@@ -20,7 +20,7 @@ IF Decoder가 필요하다면?
 - 센서 -> 텍스트로 설명 등
 
 ## HAR에 Encoder-only Transformer를 적용할 때 데이터의 흐름
-1. 입력: `X: (B, T, C)'
+1. 입력: `X: (B, T, C)`
 2. Input Projection (=Embedding): `h0: (B, T, d_model)`
 3. Positional Encoding: 텍스트와 동일 `h0 -> Z0`
 4. Self-Attn + FFN 반복: `(B, T, d_model)`
