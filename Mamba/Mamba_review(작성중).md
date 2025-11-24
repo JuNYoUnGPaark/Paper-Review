@@ -91,6 +91,7 @@ $$
 
 
 ---
+### `mamba_ssm` Library 사용법 (일단 여기에 정리)
 - `mamba_ssm` 라이브러리는 Windows 환경에서는 설치가 불가능 -> Linux-Only -> Colab도 Linux base지만 `python3.10`을 포함한 `PyTorch`등의 버전이 Pinn(고정)되어있기 때문에 `RunPods` 같은 Linux 환경을 지원하는 GPU 서버에서만 매끄럽게 작동한다. (지금까진 유일한 해결책) 
 ```Bash
   root@c0133274fa43:/workspace# 
@@ -103,4 +104,5 @@ pip install "https://github.com/state-spaces/mamba/releases/download/v1.1.1/mamb
 - 차선책으로 pure-PyTorch로 Mamba를 모델링 가능하지만 CPU로만 모델이 동작
 - `mamba-ssm`은 CUDA/C++ 커널이 별도로 들어가있고 `manylinux_x86_64` 전용으로만 CUDA 빌드가 된 wheel이 존재
 
+- `PAMAP2.csv`와 같이 용량이 큰 파일은 무조건 GDrive에서 링크 공유 후 `!gdown`이 끊김없고 빠르다. 
 ---
