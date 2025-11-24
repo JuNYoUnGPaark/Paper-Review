@@ -80,5 +80,27 @@ $$
     - 이 값들은 $x_t$에서 나오는 작은 네트워크를 통해 생성됨.
     - 즉, 입력을 한 번 보고:
         - “얘는 오래 기억/빠르게 잊기/가중치 크게” 등의 **‘선택성’ 부여**
+     
+
+
+
+
+
+
+
+
+
+---
+- `mamba_ssm` 라이브러리는 Windows 환경에서는 설치가 불가능 -> Linux-Only -> Colab도 Linux base지만 `python3.10`을 포함한 `PyTorch`등의 버전이 Pinn(고정)되어있기 때문에 `RunPods` 같은 Linux 환경을 지원하는 GPU 서버에서만 매끄럽게 작동한다. (지금까진 유일한 해결책) 
+```Bash
+  root@c0133274fa43:/workspace# 
+pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118
+pip install packaging
+pip install "https://github.com/dao-ailab/causal-conv1d/releases/download/v1.1.1/causal_conv1d-1.1.1+cu118torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_64.whl"
+pip install "https://github.com/state-spaces/mamba/releases/download/v1.1.1/mamba_ssm-1.1.1+cu118torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_64.whl"
+```
+
+- 차선책으로 pure-PyTorch로 Mamba를 모델링 가능하지만 CPU로만 모델이 동작
+- `mamba-ssm`은 CUDA/C++ 커널이 별도로 들어가있고 `manylinux_x86_64` 전용으로만 CUDA 빌드가 된 wheel이 존재
 
 ---
